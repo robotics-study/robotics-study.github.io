@@ -1,0 +1,2 @@
+# local verification artifacts (playwright screenshots/snapshots)
+.playwright-mcp/
