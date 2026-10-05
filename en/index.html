@@ -13,8 +13,8 @@
   gtag('config', 'G-G74419JHMK');
 </script>
 <title>robotics-study · A subject-by-subject robotics learning archive</title>
-<meta name="description" content="A hands-on robotics learning archive, implemented from textbook concepts to code, visualization, and benchmarks. A subject-by-subject study covering path planning (A*, RRT, Dijkstra), multi-agent motion planning (CBS, PIBT), kinematics, dynamics, control (PID, LQR, MPC), SLAM, state estimation, and learning-based control.">
-<meta name="keywords" content="robotics, robotics study, path planning, motion planning, multi-agent, multi-agent path finding, MAPF, CBS, PIBT, A*, RRT, RRT*, Dijkstra, BFS, kinematics, dynamics, control, PID, LQR, MPC, SLAM, localization, state estimation, Kalman filter, EKF, reinforcement learning, modern robotics">
+<meta name="description" content="A hands-on robotics learning archive, implemented from textbook concepts to code, visualization, and benchmarks. A subject-by-subject study covering path planning and local control (A*, RRT*, DWA, Pure Pursuit, MPC), multi-agent motion planning (CBS, PIBT), kinematics, dynamics, Kalman filtering and state estimation, and learning-based control.">
+<meta name="keywords" content="robotics, robotics study, path planning, motion planning, multi-agent, multi-agent path finding, MAPF, CBS, PIBT, A*, RRT, RRT*, Dijkstra, BFS, kinematics, dynamics, control, local planning, DWA, Pure Pursuit, MPC, MPPI, SLAM, localization, state estimation, Kalman filter, EKF, reinforcement learning, modern robotics">
 <meta name="author" content="robotics-study">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://robotics-study.github.io/en/">
@@ -193,7 +193,7 @@ a:hover{text-decoration:underline}
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "navigation_basic — path planning (BFS · Dijkstra · A* · RRT · RRT* · Fast-RRT)",
+          "name": "navigation_basic — path planning and local control (A* · RRT* · DWA · Pure Pursuit · MPC)",
           "url": "https://robotics-study.github.io/navigation_basic/"
         },
         {
@@ -282,8 +282,8 @@ a:hover{text-decoration:underline}
         </div>
         <div class="body">
           <h3><a href="https://github.com/robotics-study/navigation_basic">navigation_basic</a></h3>
-          <p><b>Path planning</b> to reach a goal while avoiding obstacles. Implementing and benchmarking BFS · Dijkstra · A* · RRT · RRT* · Fast-RRT from scratch.</p>
-          <div class="stack"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">visualization</span><span class="tag">benchmark</span></div>
+          <p><b>Path planning and local control</b> to reach a goal while avoiding obstacles. Global planners (BFS · A* · RRT*) and local planners (DWA · Pure Pursuit · MPC), implemented from scratch and benchmarked.</p>
+          <div class="stack"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">path planning</span><span class="tag">local control</span><span class="tag">benchmark</span></div>
           <div class="links">
             <a class="pill primary" href="https://robotics-study.github.io/navigation_basic/en/">📖 Docs</a>
             <a class="pill" href="https://github.com/robotics-study/navigation_basic">GitHub</a>
@@ -375,8 +375,8 @@ a:hover{text-decoration:underline}
     </div>
     <div class="cats">
       <div class="cat">
-        <h3>Motion &amp; control <span class="soon">soon</span></h3>
-        <div class="chips"><span>Local planning · DWA</span><span>Pure Pursuit</span><span>MPC</span><span>Trajectory optimization</span><span>PID / LQR</span></div>
+        <h3>Control <span class="soon">soon</span></h3>
+        <div class="chips"><span>PID</span><span>LQR</span></div>
       </div>
       <div class="cat">
         <h3>Perception &amp; state estimation <span class="soon">soon</span></h3>
