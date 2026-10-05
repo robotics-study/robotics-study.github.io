@@ -1,0 +1,44 @@
+/* og-image.png / og-image-en.png(1200×630)의 소스 스타일.
+   랜딩 페이지(index.html)의 다크 토큰과 동일한 색을 쓰고, 같은 크기로 렌더한다.
+   재생성 방법은 og/README.md 참고. */
+:root{
+  --accent:#818cf8; --accent-2:#22d3ee;
+  --bg:#0b1020; --surface:#121a2f; --border:#24304a;
+  --muted:#94a3b8;
+  --sans:"Inter",system-ui,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg)}
+body{width:1200px;height:630px;overflow:hidden;position:relative;
+  font-family:var(--sans);-webkit-font-smoothing:antialiased}
+
+/* 배경: 48px 그리드 + 좌상단 인디고/우하단 시안 글로우 */
+.grid{position:absolute;inset:0;background-image:
+  linear-gradient(rgba(148,163,184,.05) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px);
+  background-size:48px 48px}
+.glow{position:absolute;inset:0;background:
+  radial-gradient(620px 460px at -40px -80px,rgba(99,102,241,.3) 60%,transparent),
+  radial-gradient(620px 540px at 1300px 720px,rgba(6,182,212,.25) 60%,transparent)}
+
+/* 좌측 세로 그라디언트 스트립 */
+.strip{position:absolute;left:0;top:0;bottom:0;width:10px;
+  background:linear-gradient(180deg,#6366f1,#06b6d4)}
+
+.wrap{position:absolute;inset:0;padding:0 90px;display:flex;flex-direction:column;justify-content:center}
+
+.brand{display:flex;align-items:center;gap:18px}
+.logo-tile{width:76px;height:76px;border-radius:20px;flex:none;
+  background:#0f1730;border:1px solid #2b3856;display:grid;place-items:center}
+.wm{font-family:var(--mono);font-weight:700;font-size:30px;letter-spacing:-.02em;color:#c7d2fe}
+
+h1{display:inline-block;margin:40px 0 0;font-size:70.5px;line-height:1.13;letter-spacing:-.03em;
+  font-weight:700;background:linear-gradient(90deg,#fff 32%,#a5b4fc);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin:29px 0 0;color:var(--muted);font-size:30px;line-height:1.5}
+
+/* 칩은 5개 — 22px면 콘텐츠 폭(1020)을 넘기므로 원본보다 살짝 작게 */
+.chips{display:flex;gap:15px;margin-top:51px;font-family:var(--mono)}
+.chips span{white-space:nowrap;padding:9px 17px;border:1px solid #2b3856;border-radius:999px;
+  background:#121a2f;color:#a5b4fc;font-weight:700;font-size:19px;line-height:1}
